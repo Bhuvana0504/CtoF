@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>degree-conerter</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>celsius to fahrenheit</h2>
+        <div class="inputdiv">
+            <input type="text" placeholder="degree in celsius" id="input">
+        </div>
+        <div>
+            <button type="submit" onclick="convert()" >Convert to fahrenheit</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+        function convert()
+        {
+            const c=Number(document.getElementById("input").value);
+            const f=c*1.8+32;
+            const res=document.getElementById("result");
+            res.innerHTML=f.toFixed(2)+" fahrenheit";
+        }
+    </script>
+</body>
+</html>
